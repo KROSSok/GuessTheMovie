@@ -24,5 +24,6 @@ public class guessTheMovie {
         else if(game.gameLost()){
             System.out.println("You lost!");
         }
+        out.println("Game over");
     }
 }
