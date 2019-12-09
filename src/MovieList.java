@@ -6,7 +6,7 @@ public class MovieList {
     private ArrayList <String> movies;
 
     public MovieList (String pathname) throws Exception{
-        movies = new ArrayList();
+        movies = new ArrayList<>();
         File file = new File(pathname);
         Scanner scanner = new Scanner(file);
         while (scanner.hasNextLine()) {
