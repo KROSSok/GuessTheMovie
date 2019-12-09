@@ -5,7 +5,7 @@ import static java.lang.System.*;
 
 
 public class guessTheMovie {
-    public static void main(String[] args) throws Exception{
+    public static void main(String[] args) {
         Game game = new Game("movies.txt");
         out.println("I have randomly chosen a movie. Try to guess it.");
         out.println(game.getMovieTitle());

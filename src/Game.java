@@ -1,3 +1,4 @@
+import java.io.FileNotFoundException;
 import java.util.Scanner;
 import static java.lang.System.*;
 
@@ -8,8 +9,13 @@ public class Game {
     private String rightLetters;
     private int points;
 
-    public Game(String pathname) throws Exception {
-        MovieList movieList = new MovieList(pathname);
+    public Game(String pathname) {
+        MovieList movieList = null;
+        try {
+            movieList = new MovieList(pathname);
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
         movieToGuess = movieList.getRandomMovie();
         points = 0;
         rightLetters = "";
